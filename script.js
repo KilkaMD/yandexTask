@@ -308,11 +308,8 @@ const stepBadMatrixFunc = () => {
 
 //Функция запуска пересчета состояния
 const startExecution = (m, n) => {
-    let timer = setInterval(() => ((m === 1) || (n === 1)) ? stepBadMatrixFunc()
+    setInterval(() => ((m === 1) || (n === 1)) ? stepBadMatrixFunc()
         : stepNormalMatrixFunc(), 1000); //выполняет пересчет раз в секунду
-    /*setTimeout(() => {
-        clearInterval(timer);
-    }, 5000);*/
 }
 
 //Функция выбора способа получения начального состояния
